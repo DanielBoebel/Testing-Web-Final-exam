@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{810C9F1D-9A75-4BA9-98D0-BC0D47C216A0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestingFinalExam/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="TestingFinalExam/Controllers/HomeController.cs" Line="15" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.TestingFinalExam PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

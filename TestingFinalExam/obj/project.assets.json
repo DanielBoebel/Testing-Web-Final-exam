@@ -12638,11 +12638,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam/TestingFinalExam.csproj",
+      "projectUniqueName": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam.csproj",
       "projectName": "TestingFinalExam",
-      "projectPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam/TestingFinalExam.csproj",
+      "projectPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam.csproj",
       "packagesPath": "/Users/danielcb/.nuget/packages/",
-      "outputPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam/obj",
+      "outputPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
