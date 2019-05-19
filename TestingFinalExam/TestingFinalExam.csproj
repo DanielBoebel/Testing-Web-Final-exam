@@ -12,4 +12,13 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\HomeController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\logincss.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\logincss.css" />
+  </ItemGroup>
 </Project>

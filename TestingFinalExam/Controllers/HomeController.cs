@@ -12,7 +12,6 @@ namespace TestingFinalExam.Controllers
     {
         public IActionResult Index()
         {
-			var testing = "git";
             return View();
         }
 
