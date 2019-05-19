@@ -17,8 +17,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\logincss.css" />
+    <Content Remove="Views\Home\Contact.cshtml" />
+    <Content Remove="Views\Home\About.cshtml" />
+    <Content Remove="Views\Basic\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Home\AdminPage.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\logincss.css" />
+    <None Include="Views\Basic\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Basic\" />
   </ItemGroup>
 </Project>

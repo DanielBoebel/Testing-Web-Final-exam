@@ -1,6 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model TestingFinalExam.Models.UserModel
+
 
 @{
     ViewData["Title"] = "Home Page";
@@ -9,6 +8,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 
 <environment names="Development">
     <link rel="stylesheet" href="~/css/logincss.css" />
@@ -20,23 +21,24 @@
         <!-- Tabs Titles -->
         <!-- Icon -->
         <div class="fadeIn first">
-            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+            <i class="fas fa-user-tie"></i>
         </div>
+
+
 
         <!-- Login Form -->
-        <form>
-            <input type="text" id="first" class="fadeIn second" name="firstname" placeholder="First name">
-            <input type="text" id="last" class="fadeIn second" name="lastname" placeholder="Last name">
-            <input type="text" id="cpr" class="fadeIn second" name="cprnumber" placeholder="CPR">
-            <input type="text" id="phone" class="fadeIn second" name="phonenumber" placeholder="Phonenumber">
-            <input type="text" id="user" class="fadeIn third" name="usertype" placeholder="User type">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+        <form asp-action="Index">
+
+            <input type="text" id="first" class="fadeIn second" asp-for="firstname" placeholder="First name" minLength="1" maxlength="30" required/>
+            <input type="text" id="last" class="fadeIn second" asp-for="lastname" placeholder="Last name" minLength="1" maxlength="30" required />
+            <input type="text" id="cpr" class="fadeIn second" asp-for="cpr" placeholder="CPR" minLength="10" maxlength="10" required />
+            <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" minLength="8" maxlength="8" required />
+            <input type="text" id="user" class="fadeIn third" asp-for="usertype" placeholder="User type" required />
+            <input type="submit" class="fadeIn fourth" value="Continue">
+
         </form>
 
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
 
     </div>
 </div>
+

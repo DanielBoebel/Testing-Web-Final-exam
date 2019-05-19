@@ -8,26 +8,28 @@ using TestingFinalExam.Models;
 
 namespace TestingFinalExam.Controllers
 {
-    public class HomeController : Controller
-    {
-        public IActionResult Index()
+	public class HomeController : Controller
+	{
+		public IActionResult Index()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public IActionResult Index([Bind("firstname,lastname,cpr,phonenumber,usertype")]UserModel user)
         {
-            return View();
+			
+			if (user.usertype == "Admin")
+			{
+				return RedirectToAction("Index", "Admin",user);
+			}
+			if(user.usertype == "Basic"){
+				return RedirectToAction("Index", "Basic",user);
+			}
+			else
+				return View();
         }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
+       
 
         public IActionResult Error()
         {
