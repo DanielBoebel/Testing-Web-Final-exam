@@ -29,10 +29,10 @@
         <!-- Login Form -->
         <form asp-action="Index">
 
-            <input type="text" id="first" class="fadeIn second" asp-for="firstname" placeholder="First name" minLength="1" maxlength="30" required/>
-            <input type="text" id="last" class="fadeIn second" asp-for="lastname" placeholder="Last name" minLength="1" maxlength="30" required />
-            <input type="text" id="cpr" class="fadeIn second" asp-for="cpr" placeholder="CPR" minLength="10" maxlength="10" required />
-            <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" minLength="8" maxlength="8" required />
+            <input type="text" id="first" class="fadeIn second" asp-for="firstname" placeholder="First name" required />
+            <input type="text" id="last" class="fadeIn second" asp-for="lastname" placeholder="Last name" required />
+            <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" required />
+            <input type="text" id="cpr" class="fadeIn second" asp-for="cprnumber" placeholder="CPR" required />
             <input type="text" id="user" class="fadeIn third" asp-for="usertype" placeholder="User type" required />
             <input type="submit" class="fadeIn fourth" value="Continue">
 

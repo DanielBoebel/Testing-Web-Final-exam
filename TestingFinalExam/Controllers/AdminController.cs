@@ -11,11 +11,13 @@ namespace TestingFinalExam.Controllers
 {
     public class AdminController : Controller
     {
-
+		UserModel globalUser = new UserModel();
+        
 		public IActionResult Index(UserModel user)
         {
-			var firstname = user.firstname;
-			Console.WriteLine(firstname);
+			globalUser = user;
+			var cpr = user.cprnumber;
+			Console.WriteLine(cpr);
 			ViewBag.user = user.firstname;
             return View();
         }

@@ -16,7 +16,7 @@ namespace TestingFinalExam.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Index([Bind("firstname,lastname,cpr,phonenumber,usertype")]UserModel user)
+		public IActionResult Index([Bind("firstname,lastname,phonenumber,cprnumber,usertype")]UserModel user)
         {
 			
 			if (user.usertype == "Admin")
@@ -26,7 +26,7 @@ namespace TestingFinalExam.Controllers
 			if(user.usertype == "Basic"){
 				return RedirectToAction("Index", "Basic",user);
 			}
-			else
+           
 				return View();
         }
        
