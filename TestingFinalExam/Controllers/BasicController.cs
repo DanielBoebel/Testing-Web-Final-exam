@@ -32,7 +32,7 @@ namespace TestingFinalExam.Controllers
 			char index6 = datetimeString[8];
 			char index7 = datetimeString[9];
 
-			string stringformattedDatetime = index0 +""+ index1 +""+ index3 +""+ index4 +""+ index6 +""+ index7;
+			string stringformattedDatetime = index3 +""+ index4 +""+ index0 +""+ index1 +""+ index6 +""+ index7;
 			int formattedDatetime = Convert.ToInt32(stringformattedDatetime);
 
 			string stringCPR = cpr.ToString();         

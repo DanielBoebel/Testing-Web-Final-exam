@@ -1,20 +1,22 @@
 ﻿<Properties StartupConfiguration="{810C9F1D-9A75-4BA9-98D0-BC0D47C216A0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestingFinalExam/Models/UserModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestingFinalExam/Views/Home/Index.cshtml">
     <Files>
       <File FileName="TestingFinalExam/Views/Basic/Index.cshtml" Line="8" Column="86" />
-      <File FileName="TestingFinalExam/Views/Home/Index.cshtml" Line="33" Column="119" />
       <File FileName="TestingFinalExam/Views/Admin/Index.cshtml" Line="8" Column="52" />
-      <File FileName="TestingFinalExam/Controllers/AdminController.cs" Line="16" Column="43" />
-      <File FileName="TestingFinalExam/Controllers/HomeController.cs" Line="27" Column="46" />
-      <File FileName="TestingFinalExam/Controllers/BasicController.cs" Line="20" Column="1" />
-      <File FileName="TestingFinalExam/Models/UserModel.cs" Line="21" Column="1" />
+      <File FileName="TestingFinalExam/Controllers/AdminController.cs" Line="20" Column="1" />
+      <File FileName="TestingFinalExam/Controllers/HomeController.cs" Line="96" Column="1" />
+      <File FileName="TestingFinalExam/Controllers/BasicController.cs" Line="36" Column="1" />
+      <File FileName="TestingFinalExam/Models/UserModel.cs" Line="30" Column="14" />
+      <File FileName="TestingFinalExam/Views/Home/Index.cshtml" Line="54" Column="13" />
+      <File FileName="TestingFinalExam/wwwroot/css/logincss.css" Line="291" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.TestingFinalExam PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/Controllers/BasicController.cs" relfile="TestingFinalExam/Controllers/BasicController.cs" line="20" column="1" />
+      <Breakpoint file="/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/Controllers/HomeController.cs" relfile="TestingFinalExam/Controllers/HomeController.cs" line="29" column="1" />
+      <Breakpoint file="/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/Views/Home/Index.cshtml" relfile="TestingFinalExam/Views/Home/Index.cshtml" line="47" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

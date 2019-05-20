@@ -5,9 +5,9 @@
     ViewData["Title"] = "Home Page";
 }
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 
@@ -16,29 +16,77 @@
 </environment>
 <!------ Include the above in your HEAD tag ---------->
 
+<body>
+
+
 <div class="wrapper fadeInDown">
     <div id="formContent">
-        <!-- Tabs Titles -->
-        <!-- Icon -->
+
         <div class="fadeIn first">
             <i class="fas fa-user-tie"></i>
         </div>
+        <script>
+            $('#exampleModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+            })
+        </script>
+
+        <script>
+     
+        </script>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
 
 
 
         <!-- Login Form -->
         <form asp-action="Index">
-
             <input type="text" id="first" class="fadeIn second" asp-for="firstname" placeholder="First name" required />
+            @if(ViewBag.firstnameTrue == true)
+            {
+            <script>
+            function myFunction() 
+            {
+               alert(@Html.ValidationMessageFor(m => m.firstname));
+            }
+            myFunction();
+            </script>
+            }
             <input type="text" id="last" class="fadeIn second" asp-for="lastname" placeholder="Last name" required />
+            @Html.ValidationMessageFor(m => m.lastname)
             <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" required />
+            @Html.ValidationMessageFor(m => m.phonenumber)
             <input type="text" id="cpr" class="fadeIn second" asp-for="cprnumber" placeholder="CPR" required />
+            @Html.ValidationMessageFor(m => m.cprnumber)
             <input type="text" id="user" class="fadeIn third" asp-for="usertype" placeholder="User type" required />
-            <input type="submit" class="fadeIn fourth" value="Continue">
-
+            @Html.ValidationMessageFor(m => m.usertype)
+            <input type="submit" class="btn btn-primary" value="Continue" />
         </form>
-
-
     </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>

@@ -20,6 +20,7 @@
     <Content Remove="Views\Home\Contact.cshtml" />
     <Content Remove="Views\Home\About.cshtml" />
     <Content Remove="Views\Basic\Index.cshtml" />
+    <Content Remove="wwwroot\css\modalcss.css" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\AdminPage.html" />
