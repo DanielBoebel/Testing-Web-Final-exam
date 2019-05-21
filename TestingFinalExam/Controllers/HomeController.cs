@@ -59,13 +59,25 @@ namespace TestingFinalExam.Controllers
             }
 			else if(user.phonenumber.ToString().Length !=8){
 				ViewBag.phonenumberTrue = true;
-    				errormessage = "Phonenumber dosent fit the requirements";
+    				errormessage = "Phonenumber needs to be exactly 8 digits";
                 ModelState.AddModelError("phonenumber", errormessage);
 			}
-			else if (user.cprnumber.ToString().Length != 10 )
-			{
+			else if (user.phonenumber.ToString().Any(char.IsLetter) == true || user.phonenumber.ToString().Any(char.IsSymbol) == true)
+            {
+                ViewBag.phonenumberTrue = true;
+                errormessage = "Phonenumber can not contain letters or symbols";
+                ModelState.AddModelError("phonenumber", errormessage);
+            }
+			else if (user.cprnumber.ToString().Length != 10)
+            {
                 ViewBag.cprnumberTrue = true;
-                errormessage = "Cprnumber dosent fit the requirements";
+                errormessage = "CPRnumber needs to be exactly 10 digits";
+                ModelState.AddModelError("cprnumber", errormessage);
+            }
+			else if (user.cprnumber.ToString().Any(char.IsLetter) == true || user.phonenumber.ToString().Any(char.IsSymbol) == true)
+            {
+                ViewBag.phonenumberTrue = true;
+                errormessage = "CPRnumber can not contain letters or symbols";
                 ModelState.AddModelError("cprnumber", errormessage);
             }
 			else if(user.usertype != "Basic" && user.usertype != "Admin")

@@ -17,7 +17,6 @@ namespace TestingFinalExam.Controllers
         {
 			globalUser = user;
 			var cpr = user.cprnumber;
-			Console.WriteLine(cpr);
 			ViewBag.user = user.firstname;
             return View();
         }
