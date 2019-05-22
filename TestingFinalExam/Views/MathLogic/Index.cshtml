@@ -35,7 +35,15 @@
                 <label id="question">@ViewBag.rndAddNumber1 * @ViewBag.rndAddNumber2 = ?</label>
                 <input type="number" id="answer" class="fadeIn second" asp-for="addAnswer" placeholder="Input answer" required />
 
-                <input type="submit" class="btn btn-primary" value="Continue" />
+                <label id="question">What is the name of this symbol π?</label>
+                <input type="text" id="answer" class="fadeIn second" asp-for="piAnswer" placeholder="Input answer" required />
+
+                <label id="question">What is the name of this symbol Σ?</label>
+                <input type="text" id="answer" class="fadeIn second" asp-for="sumAnswer" placeholder="Input answer" required />
+
+
+
+                <input type="submit" class="btn btn-primary" value="Submit" />
                 <h1>@ViewBag.score</h1>
             </form>
         </div>
