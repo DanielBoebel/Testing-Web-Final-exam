@@ -74,10 +74,10 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Age must be numeric value";
                 ModelState.AddModelError("age", errormessage);
             }
-			else if (user.age <13)
+			else if (user.age <3 || user.age >13)
             {
                 ViewBag.ageTrue = true;
-                errormessage = "To enter, you must be 13 years old or above";
+                errormessage = "To enter, you must between the age 3-13 to enter";
                 ModelState.AddModelError("age", errormessage);
             }
 			else if(user.email.ToString().Length >=50 || user.email.ToString().Length <=4)
@@ -101,7 +101,7 @@ namespace TestingFinalExam.Controllers
 			if (errormessage == "")
 			{
 
-					return RedirectToAction("Index", "Math");
+					return RedirectToAction("Index", "MathLogic");
 
 			}
 

@@ -28,54 +28,82 @@ namespace TestingFinalExam.Controllers
 			mathobjpublic.subNumb1 = rndSubNumb1;
 			mathobjpublic.subNumb2 = rndSubNumb2;
 
-			double rndDivNumb1 = rnd1.Next(31, 101);
-			double rndDivNumb2 = rnd1.Next(5, 30);
-			double divResult = rndDivNumb1 / rndDivNumb2;
-			while (divResult % 1 != 0 )
-			{
-				rndDivNumb1 = rnd1.Next(31, 101);
-                rndDivNumb2 = rnd1.Next(5, 30);
-				divResult = rndDivNumb1 / rndDivNumb2;
 
-				if (divResult% 1 == 0)
-				{
-					mathobjpublic.divNumb1 = (int)rndDivNumb1;
-					mathobjpublic.divNumb2 = (int)rndDivNumb2;
-					break;
-				}
-			}
+			modulusNumber(rnd1);
 
 			int rndAddNumb1 = rnd1.Next(31, 101);
             int rndAddNumb2 = rnd1.Next(5, 30);
 			mathobjpublic.addNumb1 = rndAddNumb1;
             mathobjpublic.addNumb2 = rndAddNumb2;
 
+			string pi = "Pi";
+			mathobjpublic.piCorrect = pi;
+
+			string sum = "Sum";
+			mathobjpublic.sumCorrect = sum;
+
 			ViewBag.rndMulNumber1 = rndMulNumb1;
 			ViewBag.rndMulNumber2 = rndMulNumb2;
 
 			ViewBag.rndSubNumber1 = rndSubNumb1;
             ViewBag.rndSubNumber2 = rndSubNumb2;
-
-			ViewBag.rndDivNumber1 = rndDivNumb1;
-            ViewBag.rndDivNumber2 = rndDivNumb2;
+           
 
 			ViewBag.rndAddNumber1 = rndAddNumb1;
             ViewBag.rndAddNumber2 = rndAddNumb2;
+
+			ViewBag.pi = pi;
+			ViewBag.sum = sum;
 
             return View();
         }
 
 		[HttpPost]
-		public IActionResult Index([Bind("mulAnswer","subAnswer","divAnswer","addAnswer")] MathModel mathobj)
+		public IActionResult Index([Bind("mulAnswer","subAnswer","divAnswer","addAnswer","piAnswer","sumAnswer")] MathModel mathobj)
 		{
 			mulNumbers(mathobj.mulAnswer, mathobjpublic.mulNumb1, mathobjpublic.mulNumb2);
 			subNumbers(mathobj.subAnswer, mathobjpublic.subNumb1, mathobjpublic.subNumb2);
 			divNumbers(mathobj.divAnswer, mathobjpublic.divNumb1, mathobjpublic.divNumb2);
 			addNumbers(mathobj.addAnswer, mathobjpublic.addNumb1, mathobjpublic.addNumb2);
+			piSymbol(mathobj.piAnswer.ToLower(), mathobjpublic.piCorrect.ToLower());
+			sumSymbol(mathobj.sumAnswer.ToLower(), mathobjpublic.sumCorrect.ToLower());
+
 
 
 			ViewBag.score = score;
-		    return View();
+			return View("Results");
+		}
+
+		public void modulusNumber(Random rnd1){
+			double rndDivNumb1 = rnd1.Next(31, 101);
+            double rndDivNumb2 = rnd1.Next(5, 30);
+            double divResult = rndDivNumb1 / rndDivNumb2;
+
+			while (divResult % 1 != 0)
+            {
+				rndDivNumb1 = rnd1.Next(31, 101);
+                rndDivNumb2 = rnd1.Next(5, 30);
+                divResult = rndDivNumb1 / rndDivNumb2;
+
+				if (divResult % 1 == 0)
+                {
+					mathobjpublic.divNumb1 = (int)rndDivNumb1;
+					mathobjpublic.divNumb2 = (int)rndDivNumb2;
+					ViewBag.rndDivNumber1 = rndDivNumb1;
+					ViewBag.rndDivNumber2 = rndDivNumb2;
+
+
+                    break;
+                }
+            }
+			if (divResult % 1 == 0)
+			{
+				mathobjpublic.divNumb1 = (int)rndDivNumb1;
+				mathobjpublic.divNumb2 = (int)rndDivNumb2;
+				ViewBag.rndAddNumber1 = rndDivNumb1;
+				ViewBag.rndAddNumber2 = rndDivNumb2;
+			}
+
 		}
 
 		public void mulNumbers(int answer, int rndNumb1, int rndNumb2)
@@ -84,7 +112,14 @@ namespace TestingFinalExam.Controllers
 			if (answer == correct)
             {
 				score+= 2;
+				ViewBag.mulResult = true;
+                    string message = "The answer is correct!";
+                    ModelState.AddModelError("mulAnswer", message);
+
 			}else{
+				ViewBag.mulResult = false;
+				string message = "Your answer was " + answer + ", correct answer is " + correct;
+                ModelState.AddModelError("mulAnswer", message);
 				score +=- 1;
 			}         
         }
@@ -95,12 +130,17 @@ namespace TestingFinalExam.Controllers
             int correct = rndNumb1 - rndNumb2;
             if (answer == correct)
             {
-                score += 2;
-            }
-            else
-            {
+				score+= 2;
+                ViewBag.subResult = true;
+                    string message = "The answer is correct!";
+                    ModelState.AddModelError("subAnswer", message);
+
+            }else{
+                ViewBag.subResult = false;
+				string message = "Your answer was " + answer + ", correct answer is " + correct;
+                ModelState.AddModelError("subAnswer", message);
                 score +=- 1;
-            }
+            }  
         }
 
 		public void divNumbers(int answer, int rndNumb1, int rndNumb2)
@@ -108,12 +148,17 @@ namespace TestingFinalExam.Controllers
             int correct = rndNumb1 / rndNumb2;
             if (answer == correct)
             {
-                score += 2;
-            }
-            else
-            {
+				score+= 2;
+                ViewBag.divResult = true;
+                    string message = "The answer is correct!";
+                    ModelState.AddModelError("divAnswer", message);
+
+            }else{
+                ViewBag.divResult = false;
+				string message = "Your answer was " + answer + ", correct answer is " + correct;
+                ModelState.AddModelError("divAnswer", message);
                 score +=- 1;
-            }
+            }  
         }
 
 		public void addNumbers(int answer, int rndNumb1, int rndNumb2)
@@ -121,11 +166,54 @@ namespace TestingFinalExam.Controllers
             int correct = rndNumb1 * rndNumb2;
             if (answer == correct)
             {
-                score += 2;
+				score+= 2;
+                ViewBag.addResult = true;
+                    string message = "The answer is correct!";
+                    ModelState.AddModelError("addAnswer", message);
+
+            }else{
+                ViewBag.addResult = false;
+				string message = "Your answer was " + answer + ", correct answer is " + correct;
+                ModelState.AddModelError("addAnswer", message);
+                score +=- 1;
+            }  
+        }
+
+		public void piSymbol(string answer, string correct)
+		{
+			if(answer == correct){
+				score+= 2;
+					ViewBag.piResult = true;
+					string message = "The answer is correct!";
+					ModelState.AddModelError(correct.ToLower() + "Answer", message);
+
+            }else{
+               
+                score +=- 1;
+				ViewBag.piResult = false;
+				string message = "Your answer was "+answer+", correct answer is "+correct;
+                ModelState.AddModelError(correct.ToLower() + "Answer", message);            
+            }  
+		}
+
+		public void sumSymbol(string answer, string correct)
+        {
+            if (answer == correct)
+            {
+				score += 2;
+                ViewBag.sumResult = true;
+                string message = "The answer is correct!";
+                ModelState.AddModelError(correct.ToLower() + "Answer", message);
+            
             }
             else
             {
-                score +=- 1;
+                score += -1;
+
+                    ViewBag.sumResult = false;
+				    string message = "Your answer was " + answer + ", correct answer is " + correct;
+                    ModelState.AddModelError(correct.ToLower() + "Answer", message);
+                
             }
         }
 
