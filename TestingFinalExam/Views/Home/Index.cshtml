@@ -10,68 +10,25 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-
 <environment names="Development">
-    <link rel="stylesheet" href="~/css/logincss.css" />
+    <link rel="stylesheet" href="~/css/enter.css" />
+    <!--<img src="images/bg-masthead.jpg" alt="Sample Photo" />-->
 </environment>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <body>
-
-
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-
-            <div class="fadeIn first">
-                <i class="fas fa-user-tie"></i>
-            </div>   
-            <!-- Login Form -->
-            <form asp-action="Index">
-                <input type="text" id="first" class="fadeIn second" asp-for="firstname" placeholder="First name" required />
-                @if (ViewBag.firstnameTrue == true)
-                {
-                 <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.firstname)
-                 </div>
-                }
-                <input type="text" id="last" class="fadeIn second" asp-for="lastname" placeholder="Last name" required />
-                @if(ViewBag.lastnameTrue == true)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.lastname)
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="wrapper">
+                    <button type="button" class="btn btn-outline-success my-button">
+                        @Html.ActionLink("Enter!", "Login", "Home")
+                    </button>
                 </div>
-                }
-                <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" required />
-                @if(ViewBag.phonenumberTrue == true)
-                {
-                  <div class="alert alert-danger  alert-dismissible">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.phonenumber)
-                  </div>
-                }
-                <input type="text" id="age" class="fadeIn second" asp-for="age" placeholder="Age" required />
-                @if (ViewBag.ageTrue == true)
-                {
-                  <div class="alert alert-danger  alert-dismissible">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.age)
-                  </div>
-
-                }
-
-                <input type="text" id="email" class="fadeIn second" asp-for="email" placeholder="Email" required />
-
-                @if(ViewBag.emailTrue == true)
-                {
-                  <div class="alert alert-danger  alert-dismissible">
-                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.email)
-                  </div>
-                }                
-                <input type="submit" class="btn btn-primary" value="Continue" />
-            </form>
+            <div class="col"></div>
+            </div>
         </div>
     </div>
 </body>
+
+
