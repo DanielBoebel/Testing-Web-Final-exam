@@ -161,7 +161,7 @@ namespace TestingFinalExam.Controllers
             }  
         }
 
-		public void addNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool addNumbers(int answer, int rndNumb1, int rndNumb2)
         {
             int correct = rndNumb1 * rndNumb2;
             if (answer == correct)
@@ -170,12 +170,14 @@ namespace TestingFinalExam.Controllers
                 ViewBag.addResult = true;
                     string message = "The answer is correct!";
                     ModelState.AddModelError("addAnswer", message);
+                return true;
 
             }else{
                 ViewBag.addResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
                 ModelState.AddModelError("addAnswer", message);
                 score +=- 1;
+                return false;
             }  
         }
 

@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestingFinalExam;
 
 namespace TestingFinalExamTestClass
 {
@@ -8,6 +9,11 @@ namespace TestingFinalExamTestClass
         [TestMethod]
         public void TestMethod1()
         {
+            int a = 65;
+            int b = 10;
+            int c = 55;
+
+             
         }
     }
 }
