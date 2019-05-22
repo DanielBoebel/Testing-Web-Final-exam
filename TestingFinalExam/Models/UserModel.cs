@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TestingFinalExam.Models
 {
@@ -19,7 +21,6 @@ namespace TestingFinalExam.Models
 			set;
 		}
 
-
         
 		public int phonenumber
 		{
@@ -27,17 +28,19 @@ namespace TestingFinalExam.Models
 			set;
 		}
 
-		public long cprnumber
+		public int age
         {
             get;
             set;
         }
 
 
-		public string usertype
+		public string email
 		{
 			get;
 			set;
 		}
+
+
 	}
 }

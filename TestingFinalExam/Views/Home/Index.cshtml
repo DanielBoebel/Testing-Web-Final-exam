@@ -51,20 +51,23 @@
                         <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.phonenumber)
                   </div>
                 }
-                <input type="text" id="cpr" class="fadeIn second" asp-for="cprnumber" placeholder="CPR" required />
-                @if(ViewBag.cprnumberTrue == true)
+                <input type="text" id="age" class="fadeIn second" asp-for="age" placeholder="Age" required />
+                @if (ViewBag.ageTrue == true)
                 {
                   <div class="alert alert-danger  alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.cprnumber)
+                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.age)
                   </div>
+
                 }
-                <input type="text" id="user" class="fadeIn third" asp-for="usertype" placeholder="User type" required />
-                @if(ViewBag.usertypeTrue == true)
+
+                <input type="text" id="email" class="fadeIn second" asp-for="email" placeholder="Email" required />
+
+                @if(ViewBag.emailTrue == true)
                 {
                   <div class="alert alert-danger  alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.usertype)
+                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.email)
                   </div>
                 }                
                 <input type="submit" class="btn btn-primary" value="Continue" />

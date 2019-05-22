@@ -21,16 +21,21 @@
     <Content Remove="Views\Home\About.cshtml" />
     <Content Remove="Views\Basic\Index.cshtml" />
     <Content Remove="wwwroot\css\modalcss.css" />
+    <Content Remove="wwwroot\css\math.css" />
+    <Content Remove="wwwroot\js\math.js" />
+    <Content Remove="Views\Math\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\AdminPage.html" />
+    <None Remove="Views\Math\Index.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\css\logincss.css" />
-    <None Include="Views\Basic\Index.cshtml" />
+    <None Include="wwwroot\css\math.css" />
+    <None Include="wwwroot\js\math.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Basic\" />
+    <Folder Include="Views\MathLogic\" />
   </ItemGroup>
 </Project>

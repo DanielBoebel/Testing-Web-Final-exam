@@ -16,7 +16,7 @@ namespace TestingFinalExam.Controllers
 		}
 
 		[HttpPost]
-		public IActionResult Index([Bind("firstname,lastname,phonenumber,cprnumber,usertype")]UserModel user)
+		public IActionResult Index([Bind("firstname,lastname,phonenumber,age,email")]UserModel user)
         {
 			string errormessage = "";
             
@@ -68,24 +68,30 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Phonenumber can not contain letters or symbols";
                 ModelState.AddModelError("phonenumber", errormessage);
             }
-			else if (user.cprnumber.ToString().Length != 10)
+			else if (!user.age.ToString().Any(char.IsDigit)==true)
             {
-                ViewBag.cprnumberTrue = true;
-                errormessage = "CPRnumber needs to be exactly 10 digits";
-                ModelState.AddModelError("cprnumber", errormessage);
+                ViewBag.ageTrue = true;
+                errormessage = "Age must be numeric value";
+                ModelState.AddModelError("age", errormessage);
             }
-			else if (user.cprnumber.ToString().Any(char.IsLetter) == true || user.phonenumber.ToString().Any(char.IsSymbol) == true)
+			else if (user.age <13)
             {
-                ViewBag.phonenumberTrue = true;
-                errormessage = "CPRnumber can not contain letters or symbols";
-                ModelState.AddModelError("cprnumber", errormessage);
+                ViewBag.ageTrue = true;
+                errormessage = "To enter, you must be 13 years old or above";
+                ModelState.AddModelError("age", errormessage);
             }
-			else if(user.usertype != "Basic" && user.usertype != "Admin")
+			else if(user.email.ToString().Length >=50 || user.email.ToString().Length <=4)
 			{
-				ViewBag.usertypeTrue = true;
-				errormessage = "Usertype has to be Basic or Admin";
-                ModelState.AddModelError("usertype", errormessage);
+				ViewBag.emailTrue = true;
+				errormessage = "Email-adress is to long or to short";
+                ModelState.AddModelError("email", errormessage);
 			}
+			else if (!user.email.Contains("@"))
+            {
+                ViewBag.emailTrue = true;
+                errormessage = "Email-adress must contain @";
+                ModelState.AddModelError("email", errormessage);
+            }
 
 			else{
 				errormessage = "";
@@ -94,14 +100,9 @@ namespace TestingFinalExam.Controllers
 
 			if (errormessage == "")
 			{
-				if (user.usertype == "Admin")
-				{
-					return RedirectToAction("Index", "Admin", user);
-				}
-				if (user.usertype == "Basic")
-				{
-					return RedirectToAction("Index", "Basic", user);
-				}
+
+					return RedirectToAction("Index", "Math");
+
 			}
 
 			return View();

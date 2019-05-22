@@ -1,0 +1,43 @@
+﻿@model TestingFinalExam.Models.MathModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<environment names="Development">
+    <link rel="stylesheet" href="~/css/math.css" />
+</environment>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <div class="fadeIn first">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <!-- Login Form -->
+            <form asp-action="Index">
+                <label id="question">@ViewBag.rndMulNumber1 + @ViewBag.rndMulNumber2 = ?</label>
+                <input type="number" id="answer" class="fadeIn second" asp-for="mulAnswer" placeholder="Input answer" required />
+
+                <label id="question">@ViewBag.rndSubNumber1 - @ViewBag.rndSubNumber2 = ?</label>
+                <input type="number" id="answer" class="fadeIn second" asp-for="subAnswer" placeholder="Input answer" required />
+
+                <label id="question">@ViewBag.rndDivNumber1 / @ViewBag.rndDivNumber2 = ?</label>
+                <input type="number" id="answer" class="fadeIn second" asp-for="divAnswer" placeholder="Input answer" required />
+
+                <label id="question">@ViewBag.rndAddNumber1 * @ViewBag.rndAddNumber2 = ?</label>
+                <input type="number" id="answer" class="fadeIn second" asp-for="addAnswer" placeholder="Input answer" required />
+
+                <input type="submit" class="btn btn-primary" value="Continue" />
+                <h1>@ViewBag.score</h1>
+            </form>
+        </div>
+    </div>
+</body>

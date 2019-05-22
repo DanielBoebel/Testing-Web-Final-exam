@@ -16,7 +16,7 @@ namespace TestingFinalExam.Controllers
 		public IActionResult Index(UserModel user)
         {
 			globalUser = user;
-			var cpr = user.cprnumber;
+			var cpr = user.age;
 			ViewBag.user = user.firstname;
             return View();
         }
