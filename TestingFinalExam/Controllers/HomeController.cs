@@ -101,7 +101,7 @@ namespace TestingFinalExam.Controllers
 			if (errormessage == "")
 			{
 
-					return RedirectToAction("Index", "Math");
+					return RedirectToAction("Index", "Mathlogic");
 
 			}
 
