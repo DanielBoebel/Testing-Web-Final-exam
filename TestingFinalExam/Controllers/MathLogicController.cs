@@ -106,7 +106,7 @@ namespace TestingFinalExam.Controllers
 
 		}
 
-		public void mulNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool mulNumbers(int answer, int rndNumb1, int rndNumb2)
         {
 			int correct = rndNumb1 + rndNumb2;     
 			if (answer == correct)
@@ -115,17 +115,19 @@ namespace TestingFinalExam.Controllers
 				ViewBag.mulResult = true;
                     string message = "The answer is correct!";
                     ModelState.AddModelError("mulAnswer", message);
+                return true;
 
 			}else{
 				ViewBag.mulResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
                 ModelState.AddModelError("mulAnswer", message);
 				score +=- 1;
+                return false;
 			}         
         }
         
 
-		public void subNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool subNumbers(int answer, int rndNumb1, int rndNumb2)
         {
             int correct = rndNumb1 - rndNumb2;
             if (answer == correct)
@@ -134,16 +136,17 @@ namespace TestingFinalExam.Controllers
                 ViewBag.subResult = true;
                     string message = "The answer is correct!";
                     ModelState.AddModelError("subAnswer", message);
-
+                return true;
             }else{
                 ViewBag.subResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
                 ModelState.AddModelError("subAnswer", message);
                 score +=- 1;
+                return false;
             }  
         }
 
-		public void divNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool divNumbers(int answer, int rndNumb1, int rndNumb2)
         {
             int correct = rndNumb1 / rndNumb2;
             if (answer == correct)
@@ -152,12 +155,14 @@ namespace TestingFinalExam.Controllers
                 ViewBag.divResult = true;
                     string message = "The answer is correct!";
                     ModelState.AddModelError("divAnswer", message);
+                return true;
 
             }else{
                 ViewBag.divResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
                 ModelState.AddModelError("divAnswer", message);
                 score +=- 1;
+                return false;
             }  
         }
 
@@ -181,24 +186,25 @@ namespace TestingFinalExam.Controllers
             }  
         }
 
-		public void piSymbol(string answer, string correct)
+		public bool piSymbol(string answer, string correct)
 		{
 			if(answer == correct){
 				score+= 2;
 					ViewBag.piResult = true;
 					string message = "The answer is correct!";
 					ModelState.AddModelError(correct.ToLower() + "Answer", message);
-
+                return true;
             }else{
                
                 score +=- 1;
 				ViewBag.piResult = false;
 				string message = "Your answer was "+answer+", correct answer is "+correct;
-                ModelState.AddModelError(correct.ToLower() + "Answer", message);            
+                ModelState.AddModelError(correct.ToLower() + "Answer", message);
+                return false;
             }  
 		}
 
-		public void sumSymbol(string answer, string correct)
+		public bool sumSymbol(string answer, string correct)
         {
             if (answer == correct)
             {
@@ -206,7 +212,7 @@ namespace TestingFinalExam.Controllers
                 ViewBag.sumResult = true;
                 string message = "The answer is correct!";
                 ModelState.AddModelError(correct.ToLower() + "Answer", message);
-            
+                return true;
             }
             else
             {
@@ -215,7 +221,7 @@ namespace TestingFinalExam.Controllers
                     ViewBag.sumResult = false;
 				    string message = "Your answer was " + answer + ", correct answer is " + correct;
                     ModelState.AddModelError(correct.ToLower() + "Answer", message);
-                
+                return false;
             }
         }
 
