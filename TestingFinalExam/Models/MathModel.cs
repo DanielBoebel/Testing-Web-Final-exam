@@ -75,29 +75,6 @@ namespace TestingFinalExam.Models
             set;
         }
 
-        public string oddNumbersAnswer
-		{
-			get;
-			set;
-		}
-
-		public string oddNumbersCorrect
-        {
-            get;
-            set;
-        }
-
-		public string evenNumbersAnswer
-        {
-            get;
-            set;
-        }
-
-		public string evenNumbersCorrect
-        {
-            get;
-            set;
-        }
 	    
 		public string piAnswer
         {

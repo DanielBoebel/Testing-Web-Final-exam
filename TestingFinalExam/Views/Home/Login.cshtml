@@ -14,7 +14,7 @@
 <environment names="Development">
     <link rel="stylesheet" href="~/css/logincss.css" />
 </environment>
-<!------ Include the above in your HEAD tag ---------->
+
 
 <body>
 
@@ -43,7 +43,7 @@
                     <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.lastname)
                 </div>
                 }
-                <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" required />
+                <input type="text" id="phone" class="fadeIn second" asp-for="phonenumber" placeholder="Phonenumber" />
                 @if(ViewBag.phonenumberTrue == true)
                 {
                   <div class="alert alert-danger  alert-dismissible">
@@ -51,7 +51,7 @@
                         <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.phonenumber)
                   </div>
                 }
-                <input type="text" id="age" class="fadeIn second" asp-for="age" placeholder="Age" required />
+                <input type="number" id="age" class="fadeIn second" asp-for="age" placeholder="Age" required />
                 @if (ViewBag.ageTrue == true)
                 {
                   <div class="alert alert-danger  alert-dismissible">
@@ -61,17 +61,17 @@
 
                 }
 
-                <input type="email" id="email" class="fadeIn second" asp-for="email" placeholder="Email" required />
+                <input type="number" id="guessScore" class="fadeIn second" asp-for="guessScore" placeholder="Guess a score between -6 and 12" required />
 
-                @if(ViewBag.emailTrue == true)
+                @if(ViewBag.guessScore == true)
                 {
                   <div class="alert alert-danger  alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.email)
+                        <strong>Danger!</strong> @Html.ValidationMessageFor(m => m.guessScore)
                   </div>
                 }                
                 <input type="submit" class="btn btn-primary" value="Continue" />
             </form>
-        </div>
+        </div> 
     </div>
 </body>
