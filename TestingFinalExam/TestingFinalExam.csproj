@@ -24,6 +24,8 @@
     <Content Remove="wwwroot\css\math.css" />
     <Content Remove="wwwroot\js\math.js" />
     <Content Remove="Views\Math\Index.cshtml" />
+    <Content Remove="wwwroot\css\enter.css" />
+    <Content Remove="wwwroot\images\bg-masthead.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\AdminPage.html" />
@@ -33,6 +35,8 @@
     <None Include="wwwroot\css\logincss.css" />
     <None Include="wwwroot\css\math.css" />
     <None Include="wwwroot\js\math.js" />
+    <None Include="wwwroot\css\enter.css" />
+    <None Include="wwwroot\images\bg-masthead.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Test\" />

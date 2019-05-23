@@ -11,12 +11,18 @@ namespace TestingFinalExam.Controllers
 	public class HomeController : Controller
 	{
 		public IActionResult Index()
+        {
+            return View();
+        }
+       
+
+		public IActionResult Login()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		public IActionResult Index([Bind("firstname,lastname,phonenumber,age,email")]UserModel user)
+		public IActionResult Login([Bind("firstname,lastname,phonenumber,age,email")]UserModel user)
         {
 			string errormessage = "";
             
@@ -74,7 +80,7 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Age must be numeric value";
                 ModelState.AddModelError("age", errormessage);
             }
-			else if (user.age <3 || user.age >13)
+			else if (user.age < 3 || user.age > 13)
             {
                 ViewBag.ageTrue = true;
                 errormessage = "To enter, you must between the age 3-13 to enter";
