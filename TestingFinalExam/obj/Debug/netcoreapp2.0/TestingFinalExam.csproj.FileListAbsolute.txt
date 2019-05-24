@@ -20,3 +20,14 @@ C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/D
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.dll
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.pdb
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.csprojAssemblyReference.cache
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.deps.json
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.json
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.dev.json
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.dll
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.pdb
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.csprojAssemblyReference.cache
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.csproj.CoreCompileInputs.cache
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.AssemblyInfoInputs.cache
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.AssemblyInfo.cs
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.dll
+/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.pdb

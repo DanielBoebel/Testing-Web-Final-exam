@@ -92,18 +92,15 @@ namespace TestingFinalExam.Controllers
 				errormessage = "Guess has to be between -6 and 12";
                 ModelState.AddModelError("guessScore", errormessage);
 			}
-
-
 			else{
 				errormessage = "";
 			}
 
-
 			if (errormessage == "")
 			{
-					return RedirectToAction("Index", "MathLogic");
-
-
+                MathLogicController mathLogicController = new MathLogicController();
+                mathLogicController.SetUser(user);
+                return RedirectToAction("Index", "MathLogic");
 			}
 
 			return View();

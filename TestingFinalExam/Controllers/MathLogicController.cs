@@ -13,9 +13,9 @@ namespace TestingFinalExam.Controllers
     {
 		static public int score;
 		static public MathModel mathobjpublic = new MathModel();
+        static public UserModel user = new UserModel();
 
-
-		public IActionResult Index()
+        public IActionResult Index()
         {
             Random rnd1 = new Random();
             int rndMulNumb1 = rnd1.Next(1, 500);
@@ -225,7 +225,17 @@ namespace TestingFinalExam.Controllers
             }
         }
 
+        public IActionResult Printable()
+        {
+            ViewBag.score = score;
+            ViewBag.user = user;
+            return View("Printable");
+        }
 
+        public void SetUser(UserModel userModel)
+        {
+            user = userModel;
+        }
 
     }
 }
