@@ -1,0 +1,25 @@
+﻿@model TestingFinalExam.Models.MathModel
+
+
+@{
+    ViewData["Title"] = "Printable version";
+}
+
+<div style="padding: 1rem;">
+    <h1>MathLearner</h1>
+
+    <h3>User details</h3>
+    <b>First name</b>
+    <p>@ViewBag.user.firstname</p>
+    <b>Last name</b>
+    <p>@ViewBag.user.lastname</p>
+    <b>Phone number</b>
+    <p>@ViewBag.user.phonenumber</p>
+    <b>Age</b>
+    <p>@ViewBag.user.age</p>
+    <b>Email</b>
+    <p>@ViewBag.user.email</p>
+    <br />
+    <h3>MathLearner score</h3>
+    <p>@ViewBag.score</p>
+</div>

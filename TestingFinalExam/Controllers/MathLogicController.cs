@@ -13,7 +13,7 @@ namespace TestingFinalExam.Controllers
     {
 		static public int score;
 		static public MathModel mathobjpublic = new MathModel();
-
+        static public UserModel user = new UserModel();
 
 		public IActionResult Index()
         {
@@ -68,8 +68,6 @@ namespace TestingFinalExam.Controllers
 			piSymbol(mathobj.piAnswer.ToLower(), mathobjpublic.piCorrect.ToLower());
 			sumSymbol(mathobj.sumAnswer.ToLower(), mathobjpublic.sumCorrect.ToLower());
 
-
-
 			ViewBag.score = score;
 			return View("Results");
 		}
@@ -113,8 +111,8 @@ namespace TestingFinalExam.Controllers
             {
 				score+= 2;
 				ViewBag.mulResult = true;
-                    string message = "The answer is correct!";
-                    ModelState.AddModelError("mulAnswer", message);
+                string message = "The answer is correct!";
+                ModelState.AddModelError("mulAnswer", message);
                 return true;
 
 			}else{
@@ -134,8 +132,8 @@ namespace TestingFinalExam.Controllers
             {
 				score+= 2;
                 ViewBag.subResult = true;
-                    string message = "The answer is correct!";
-                    ModelState.AddModelError("subAnswer", message);
+                string message = "The answer is correct!";
+                ModelState.AddModelError("subAnswer", message);
                 return true;
             }else{
                 ViewBag.subResult = false;
@@ -153,8 +151,8 @@ namespace TestingFinalExam.Controllers
             {
 				score+= 2;
                 ViewBag.divResult = true;
-                    string message = "The answer is correct!";
-                    ModelState.AddModelError("divAnswer", message);
+                string message = "The answer is correct!";
+                ModelState.AddModelError("divAnswer", message);
                 return true;
 
             }else{
@@ -173,8 +171,8 @@ namespace TestingFinalExam.Controllers
             {
 				score+= 2;
                 ViewBag.addResult = true;
-                    string message = "The answer is correct!";
-                    ModelState.AddModelError("addAnswer", message);
+                string message = "The answer is correct!";
+                ModelState.AddModelError("addAnswer", message);
                 return true;
 
             }else{
@@ -190,12 +188,13 @@ namespace TestingFinalExam.Controllers
 		{
 			if(answer == correct){
 				score+= 2;
-					ViewBag.piResult = true;
-					string message = "The answer is correct!";
-					ModelState.AddModelError(correct.ToLower() + "Answer", message);
+				ViewBag.piResult = true;
+				string message = "The answer is correct!";
+				ModelState.AddModelError(correct.ToLower() + "Answer", message);
                 return true;
-            }else{
-               
+            }
+            else
+            {
                 score +=- 1;
 				ViewBag.piResult = false;
 				string message = "Your answer was "+answer+", correct answer is "+correct;
@@ -217,15 +216,23 @@ namespace TestingFinalExam.Controllers
             else
             {
                 score += -1;
-
-                    ViewBag.sumResult = false;
-				    string message = "Your answer was " + answer + ", correct answer is " + correct;
-                    ModelState.AddModelError(correct.ToLower() + "Answer", message);
+                ViewBag.sumResult = false;
+			    string message = "Your answer was " + answer + ", correct answer is " + correct;
+                ModelState.AddModelError(correct.ToLower() + "Answer", message);
                 return false;
             }
         }
 
+        public IActionResult Printable()
+        {
+            ViewBag.score = score;
+            ViewBag.user = user;
+            return View("Printable");
+        }
 
-
+        public void SetUser(UserModel userModel)
+        {
+            user = userModel;
+        }
     }
 }

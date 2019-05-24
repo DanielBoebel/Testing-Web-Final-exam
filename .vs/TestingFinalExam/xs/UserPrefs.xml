@@ -1,10 +1,38 @@
 ﻿<Properties StartupConfiguration="{810C9F1D-9A75-4BA9-98D0-BC0D47C216A0}|Default">
-  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.ItemProperties.TestingFinalExam PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestingFinalExam/Views/MathLogic/Printable.cshtml">
+    <Files>
+      <File FileName="TestingFinalExam/Controllers/MathLogicController.cs" Line="229" Column="33" />
+      <File FileName="TestingFinalExam/Views/MathLogic/Printable.cshtml" Line="14" Column="21" />
+      <File FileName="TestingFinalExam/Models/MathModel.cs" Line="41" Column="23" />
+      <File FileName="TestingFinalExam/Controllers/HomeController.cs" Line="112" Column="38" />
+      <File FileName="TestingFinalExam/Models/UserModel.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TestingFinalExam" expanded="True">
+            <Node name="TestingFinalExam" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="MathLogic" expanded="True">
+                  <Node name="Printable.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="UnitTestProject" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
