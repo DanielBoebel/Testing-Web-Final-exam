@@ -35,7 +35,7 @@ namespace TestingFinalExam.Models
         }
 
 
-		public string email
+		public int guessScore
 		{
 			get;
 			set;

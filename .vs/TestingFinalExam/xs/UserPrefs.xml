@@ -1,10 +1,35 @@
 ﻿<Properties StartupConfiguration="{810C9F1D-9A75-4BA9-98D0-BC0D47C216A0}|Default">
-  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.ItemProperties.TestingFinalExam PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TestingFinalExam" expanded="True">
+            <Node name="TestingFinalExam" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="MathLogic" expanded="True">
+                  <Node name="Results.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UnitTestProject" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/wwwroot/css/logincss.css" relfile="TestingFinalExam/wwwroot/css/logincss.css" line="108" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
