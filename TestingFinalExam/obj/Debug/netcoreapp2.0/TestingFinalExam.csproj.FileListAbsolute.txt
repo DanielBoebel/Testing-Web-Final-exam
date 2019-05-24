@@ -1,14 +1,3 @@
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.deps.json
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.json
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.dev.json
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.dll
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.pdb
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.csprojAssemblyReference.cache
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.csproj.CoreCompileInputs.cache
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.AssemblyInfoInputs.cache
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.AssemblyInfo.cs
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.dll
-C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.pdb
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.deps.json
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.json
 /Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/bin/Debug/netcoreapp2.0/TestingFinalExam.runtimeconfig.dev.json
@@ -31,3 +20,14 @@ C:/Users/nickl/Documents/Test Exam/Testing-Web-Final-exam/TestingFinalExam/obj/D
 /Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.AssemblyInfo.cs
 /Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.dll
 /Users/anderstofte/Code/Testing/testing-exam/code/TestingFinalExam/obj/Debug/netcoreapp2.0/TestingFinalExam.pdb
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.deps.json
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.runtimeconfig.json
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.runtimeconfig.dev.json
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.dll
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.pdb
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.csprojAssemblyReference.cache
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.csproj.CoreCompileInputs.cache
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.AssemblyInfoInputs.cache
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.AssemblyInfo.cs
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.dll
+C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.pdb

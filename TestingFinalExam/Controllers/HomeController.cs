@@ -63,7 +63,7 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Your name can not contain symbols";
                 ModelState.AddModelError("lastname", errormessage);
             }
-			else if(user.phonenumber.ToString().Length !=8 || user.phonenumber.ToString().Length != 0){
+			else if(user.phonenumber.ToString().Length !=8 && !user.phonenumber.ToString().Equals("0")){
 				ViewBag.phonenumberTrue = true;
     				errormessage = "Phonenumber needs to be exactly 8 digits";
                 ModelState.AddModelError("phonenumber", errormessage);
@@ -80,10 +80,10 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Age must be numeric value";
                 ModelState.AddModelError("age", errormessage);
             }
-			else if (user.age <=4  || user.age >= 13)
+			else if (user.age <5  || user.age > 12)
             {
                 ViewBag.ageTrue = true;
-                errormessage = "To enter, you must between the age 3-13 to enter";
+                errormessage = "To enter, you must between the age 5-12 to enter";
                 ModelState.AddModelError("age", errormessage);
             }
 			else if(user.guessScore <-6 || user.guessScore >12)
