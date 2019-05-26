@@ -42,9 +42,4 @@ steps:
     feedsToUse: 'select'
     versioningScheme: 'off'
 
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
 
