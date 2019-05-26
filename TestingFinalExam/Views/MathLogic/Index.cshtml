@@ -22,30 +22,33 @@
                 <i class="fas fa-user-tie"></i>
             </div>
             <!-- Login Form -->
-            <form asp-action="Index">
-                <label id="question">@ViewBag.rndMulNumber1 + @ViewBag.rndMulNumber2 = ?</label>
-                <input type="number" id="answer" class="fadeIn second" asp-for="mulAnswer" placeholder="Input answer" required />
+			<form asp-action="Index">
+				<label id="question">@ViewBag.rndMulNumber1 + @ViewBag.rndMulNumber2 = ?</label>
+				<input type="number" id="answer" class="fadeIn second" asp-for="addAnswer" placeholder="Input answer" required />
 
-                <label id="question">@ViewBag.rndSubNumber1 - @ViewBag.rndSubNumber2 = ?</label>
-                <input type="number" id="answer" class="fadeIn second" asp-for="subAnswer" placeholder="Input answer" required />
+				<label id="question">@ViewBag.rndSubNumber1 - @ViewBag.rndSubNumber2 = ?</label>
+				<input type="number" id="answer" class="fadeIn second" asp-for="subAnswer" placeholder="Input answer" required />
 
-                <label id="question">@ViewBag.rndDivNumber1 / @ViewBag.rndDivNumber2 = ?</label>
-                <input type="number" id="answer" class="fadeIn second" asp-for="divAnswer" placeholder="Input answer" required />
+				<label id="question">@ViewBag.rndDivNumber1 / @ViewBag.rndDivNumber2 = ?</label>
+				<input type="number" id="answer" class="fadeIn second" asp-for="divAnswer" placeholder="Input answer" required />
 
-                <label id="question">@ViewBag.rndAddNumber1 * @ViewBag.rndAddNumber2 = ?</label>
-                <input type="number" id="answer" class="fadeIn second" asp-for="addAnswer" placeholder="Input answer" required />
+				<label id="question">@ViewBag.rndAddNumber1 * @ViewBag.rndAddNumber2 = ?</label>
+				<input type="number" id="answer" class="fadeIn second" asp-for="multiplyAnswer" placeholder="Input answer" required />
 
-                <label id="question">What is the name of this symbol π?</label>
-                <input type="text" id="answer" class="fadeIn second" asp-for="piAnswer" placeholder="Input answer" required />
+				<label id="question">Enter 4 even numbers devided by a ","</label>
+				<input type="text" id="answer" class="fadeIn second" asp-for="multipleNumbAnswer" placeholder="Input answer" required />
 
-                <label id="question">What is the name of this symbol Σ?</label>
-                <input type="text" id="answer" class="fadeIn second" asp-for="sumAnswer" placeholder="Input answer" required />
+				<label id="question">What is the name of this symbol π?</label>
+				<input type="text" id="answer" class="fadeIn second" asp-for="piAnswer" placeholder="Input answer" required />
+
+				<label id="question">What is the name of this symbol Σ?</label>
+				<input type="text" id="answer" class="fadeIn second" asp-for="sumAnswer" placeholder="Input answer" required />
 
 
 
-                <input type="submit" class="btn btn-primary" value="Submit" />
-                <h1>@ViewBag.score</h1>
-            </form>
+				<input type="submit" class="btn btn-primary" value="Submit" />
+				<h1>@ViewBag.score</h1>
+			</form>
         </div>
     </div>
 </body>
