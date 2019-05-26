@@ -22,99 +22,115 @@
                 <i class="fas fa-user-tie"></i>
             </div>
             <!-- Login Form -->
-            <form asp-action="Results">
-                @if (ViewBag.mulResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
-                </div>
-                 }
-                 @if (ViewBag.mulResult == false)
-                 {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
-                </div>
-                }
+			<form asp-action="Results">
+				@if (ViewBag.mulResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
+					</div>
+				}
+				@if (ViewBag.mulResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
+					</div>
+				}
 
-                @if (ViewBag.subResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.subAnswer)
-                </div>
-                }
-                @if (ViewBag.subResult == false)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.subAnswer)
-                </div>
-                }
+				@if (ViewBag.subResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.subAnswer)
+					</div>
+				}
+				@if (ViewBag.subResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.subAnswer)
+					</div>
+				}
 
-                @if (ViewBag.divResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.divAnswer)
-                </div>
-                }
-                @if (ViewBag.divResult == false)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.divAnswer)
-                </div>
-                }
+				@if (ViewBag.divResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.divAnswer)
+					</div>
+				}
+				@if (ViewBag.divResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.divAnswer)
+					</div>
+				}
 
-                @if (ViewBag.addResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
-                </div>
-                }
-                @if (ViewBag.addResult == false)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
-                </div>
-                }
+				@if (ViewBag.addResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
+					</div>
+				}
+				@if (ViewBag.addResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
+					</div>
+				}
 
-                @if (ViewBag.piResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.piAnswer)
-                </div>
-                }
-                @if (ViewBag.piResult == false)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.piAnswer)
-                </div>
-                }
+				@if (ViewBag.numbResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.multipleNumbAnswer)
+					</div>
+				}
+				@if (ViewBag.numbResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.multipleNumbAnswer)
+					</div>
+				}
 
-                @if (ViewBag.sumResult == true)
-                {
-                <div class="alert alert-success  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.sumAnswer)
-                </div>
-                }
-                @if (ViewBag.sumResult == false)
-                {
-                <div class="alert alert-danger  alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.sumAnswer)
-                </div>
-                }
 
-                <h1>Your total score is: @ViewBag.score</h1>
-            </form>
+				@if (ViewBag.piResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.piAnswer)
+					</div>
+				}
+				@if (ViewBag.piResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.piAnswer)
+					</div>
+				}
+
+				@if (ViewBag.sumResult == true)
+				{
+					<div class="alert alert-success  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Correct!</strong> @Html.ValidationMessageFor(m => m.sumAnswer)
+					</div>
+				}
+				@if (ViewBag.sumResult == false)
+				{
+					<div class="alert alert-danger  alert-dismissible">
+						<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+						<strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.sumAnswer)
+					</div>
+				}
+
+				<h1>Your total score is: @ViewBag.score</h1>
+			</form>
 
             <a asp-controller="MathLogic" asp-action="Printable">
                 See printable version

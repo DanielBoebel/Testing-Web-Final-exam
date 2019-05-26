@@ -31,3 +31,14 @@ C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\D
 C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.AssemblyInfo.cs
 C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.dll
 C:\Users\nickl\Documents\Test Exam\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.pdb
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.deps.json
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.runtimeconfig.json
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.runtimeconfig.dev.json
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.dll
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\bin\Debug\netcoreapp2.0\TestingFinalExam.pdb
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.csprojAssemblyReference.cache
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.csproj.CoreCompileInputs.cache
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.AssemblyInfoInputs.cache
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.AssemblyInfo.cs
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.dll
+C:\Users\Extremegaming\Desktop\C#\Testing-Web-Final-exam\TestingFinalExam\obj\Debug\netcoreapp2.0\TestingFinalExam.pdb

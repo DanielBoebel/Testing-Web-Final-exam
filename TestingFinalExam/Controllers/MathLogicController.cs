@@ -59,12 +59,13 @@ namespace TestingFinalExam.Controllers
         }
 
 		[HttpPost]
-		public IActionResult Index([Bind("addAnswer","subAnswer","divAnswer","multiplyAnswer","piAnswer","sumAnswer")] MathModel mathobj)
+		public IActionResult Index([Bind("addAnswer","subAnswer","divAnswer","multiplyAnswer", "multipleNumbAnswer", "piAnswer","sumAnswer")] MathModel mathobj)
 		{
 			addNumbers(mathobj.addAnswer, mathobjpublic.mulNumb1, mathobjpublic.mulNumb2);
 			subNumbers(mathobj.subAnswer, mathobjpublic.subNumb1, mathobjpublic.subNumb2);
 			divNumbers(mathobj.divAnswer, mathobjpublic.divNumb1, mathobjpublic.divNumb2);
 			multiplyNumbers(mathobj.multiplyAnswer, mathobjpublic.addNumb1, mathobjpublic.addNumb2);
+			multipleNumbers(mathobj.multipleNumbAnswer);
 			piSymbol(mathobj.piAnswer.ToLower(), mathobjpublic.piCorrect.ToLower());
 			sumSymbol(mathobj.sumAnswer.ToLower(), mathobjpublic.sumCorrect.ToLower());
 
@@ -178,6 +179,39 @@ namespace TestingFinalExam.Controllers
                 return false;
             }  
         }
+
+		public bool multipleNumbers(string multipleNumbers)
+		{
+			var totalNumber = 0;
+			 string[] numbers = multipleNumbers.Split(",");
+			foreach (var item in numbers)
+			{
+				int number;
+				Int32.TryParse(item, out number);
+
+				if (number % 2 == 0)
+				{
+					totalNumber += 1;
+				}
+			}
+
+			if(totalNumber == 4){
+				score += 2;
+				ViewBag.numbResult = true;
+				string message = "The answer is correct!";
+				ModelState.AddModelError("multipleNumbAnswer", message);
+				return true;
+			}
+			else
+			{
+				ViewBag.numbResult = false;
+				string message = "Your answer was not correct";
+				ModelState.AddModelError("multipleNumbAnswer", message);
+				score += -1;
+				return false;
+			}
+
+		}
 
 		public bool piSymbol(string answer, string correct)
 		{
