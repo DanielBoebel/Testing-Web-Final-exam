@@ -63,7 +63,7 @@ namespace TestingFinalExam.Controllers
                 errormessage = "Your name can not contain symbols";
                 ModelState.AddModelError("lastname", errormessage);
             }
-			else if(user.phonenumber.ToString().Length !=8 || user.phonenumber.ToString().Length != 0){
+			else if(user.phonenumber.ToString().Length !=8 && user.phonenumber.ToString().Length != 0){
 				ViewBag.phonenumberTrue = true;
     				errormessage = "Phonenumber needs to be exactly 8 digits";
                 ModelState.AddModelError("phonenumber", errormessage);
