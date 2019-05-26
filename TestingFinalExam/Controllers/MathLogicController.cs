@@ -13,9 +13,9 @@ namespace TestingFinalExam.Controllers
     {
 		static public int score;
 		static public MathModel mathobjpublic = new MathModel();
+        static public UserModel user = new UserModel();
 
-
-		public IActionResult Index()
+        public IActionResult Index()
         {
             Random rnd1 = new Random();
             int rndMulNumb1 = rnd1.Next(1, 500);
@@ -59,12 +59,12 @@ namespace TestingFinalExam.Controllers
         }
 
 		[HttpPost]
-		public IActionResult Index([Bind("mulAnswer","subAnswer","divAnswer","addAnswer","piAnswer","sumAnswer")] MathModel mathobj)
+		public IActionResult Index([Bind("addAnswer","subAnswer","divAnswer","multiplyAnswer","piAnswer","sumAnswer")] MathModel mathobj)
 		{
-			mulNumbers(mathobj.mulAnswer, mathobjpublic.mulNumb1, mathobjpublic.mulNumb2);
+			addNumbers(mathobj.addAnswer, mathobjpublic.mulNumb1, mathobjpublic.mulNumb2);
 			subNumbers(mathobj.subAnswer, mathobjpublic.subNumb1, mathobjpublic.subNumb2);
 			divNumbers(mathobj.divAnswer, mathobjpublic.divNumb1, mathobjpublic.divNumb2);
-			addNumbers(mathobj.addAnswer, mathobjpublic.addNumb1, mathobjpublic.addNumb2);
+			multiplyNumbers(mathobj.multiplyAnswer, mathobjpublic.addNumb1, mathobjpublic.addNumb2);
 			piSymbol(mathobj.piAnswer.ToLower(), mathobjpublic.piCorrect.ToLower());
 			sumSymbol(mathobj.sumAnswer.ToLower(), mathobjpublic.sumCorrect.ToLower());
 
@@ -75,38 +75,31 @@ namespace TestingFinalExam.Controllers
 		}
 
 		public void modulusNumber(Random rnd1){
-			double rndDivNumb1 = rnd1.Next(31, 101);
-            double rndDivNumb2 = rnd1.Next(5, 30);
-            double divResult = rndDivNumb1 / rndDivNumb2;
+            double rndDivNumb1, rndDivNumb2;
+            double divResult;
 
-			while (divResult % 1 != 0)
+            do
             {
-				rndDivNumb1 = rnd1.Next(31, 101);
+                rndDivNumb1 = rnd1.Next(31, 101);
                 rndDivNumb2 = rnd1.Next(5, 30);
                 divResult = rndDivNumb1 / rndDivNumb2;
 
-				if (divResult % 1 == 0)
+                if (divResult % 1 == 0)
                 {
-					mathobjpublic.divNumb1 = (int)rndDivNumb1;
-					mathobjpublic.divNumb2 = (int)rndDivNumb2;
-					ViewBag.rndDivNumber1 = rndDivNumb1;
-					ViewBag.rndDivNumber2 = rndDivNumb2;
+                    mathobjpublic.divNumb1 = (int)rndDivNumb1;
+                    mathobjpublic.divNumb2 = (int)rndDivNumb2;
+                    ViewBag.rndDivNumber1 = rndDivNumb1;
+                    ViewBag.rndDivNumber2 = rndDivNumb2;
 
 
                     break;
                 }
-            }
-			if (divResult % 1 == 0)
-			{
-				mathobjpublic.divNumb1 = (int)rndDivNumb1;
-				mathobjpublic.divNumb2 = (int)rndDivNumb2;
-				ViewBag.rndAddNumber1 = rndDivNumb1;
-				ViewBag.rndAddNumber2 = rndDivNumb2;
-			}
+            } while (divResult % 1 != 0);
+            
 
 		}
 
-		public bool mulNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool addNumbers(int answer, int rndNumb1, int rndNumb2)
         {
 			int correct = rndNumb1 + rndNumb2;     
 			if (answer == correct)
@@ -114,13 +107,13 @@ namespace TestingFinalExam.Controllers
 				score+= 2;
 				ViewBag.mulResult = true;
                     string message = "The answer is correct!";
-                    ModelState.AddModelError("mulAnswer", message);
+                    ModelState.AddModelError("addAnswer", message);
                 return true;
 
 			}else{
 				ViewBag.mulResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
-                ModelState.AddModelError("mulAnswer", message);
+                ModelState.AddModelError("addAnswer", message);
 				score +=- 1;
                 return false;
 			}         
@@ -166,7 +159,7 @@ namespace TestingFinalExam.Controllers
             }  
         }
 
-		public bool addNumbers(int answer, int rndNumb1, int rndNumb2)
+		public bool multiplyNumbers(int answer, int rndNumb1, int rndNumb2)
         {
             int correct = rndNumb1 * rndNumb2;
             if (answer == correct)
@@ -174,13 +167,13 @@ namespace TestingFinalExam.Controllers
 				score+= 2;
                 ViewBag.addResult = true;
                     string message = "The answer is correct!";
-                    ModelState.AddModelError("addAnswer", message);
+                    ModelState.AddModelError("multiplyAnswer", message);
                 return true;
 
             }else{
                 ViewBag.addResult = false;
 				string message = "Your answer was " + answer + ", correct answer is " + correct;
-                ModelState.AddModelError("addAnswer", message);
+                ModelState.AddModelError("multiplyAnswer", message);
                 score +=- 1;
                 return false;
             }  
@@ -225,7 +218,17 @@ namespace TestingFinalExam.Controllers
             }
         }
 
+        public IActionResult Printable()
+        {
+            ViewBag.score = score;
+            ViewBag.user = user;
+            return View("Printable");
+        }
 
+        public void SetUser(UserModel userModel)
+        {
+            user = userModel;
+        }
 
     }
 }

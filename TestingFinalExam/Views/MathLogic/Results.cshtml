@@ -27,14 +27,14 @@
                 {
                 <div class="alert alert-success  alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.mulAnswer)
+                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
                 </div>
                  }
                  @if (ViewBag.mulResult == false)
                  {
                 <div class="alert alert-danger  alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.mulAnswer)
+                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
                 </div>
                 }
 
@@ -72,14 +72,14 @@
                 {
                 <div class="alert alert-success  alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
+                    <strong>Correct!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
                 </div>
                 }
                 @if (ViewBag.addResult == false)
                 {
                 <div class="alert alert-danger  alert-dismissible">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.addAnswer)
+                    <strong>Wrong!</strong> @Html.ValidationMessageFor(m => m.multiplyAnswer)
                 </div>
                 }
 
@@ -115,6 +115,11 @@
 
                 <h1>Your total score is: @ViewBag.score</h1>
             </form>
+
+            <a asp-controller="MathLogic" asp-action="Printable">
+                See printable version
+            </a>
+
         </div>
     </div>
 

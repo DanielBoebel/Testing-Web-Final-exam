@@ -3,7 +3,7 @@ namespace TestingFinalExam.Models
 {
     public class MathModel
     {
-        public int mulAnswer
+        public int addAnswer
 		{
 			get;
 			set;
@@ -56,7 +56,7 @@ namespace TestingFinalExam.Models
             set;
         }
 
-		public int addAnswer
+		public int multiplyAnswer
         {
             get;
             set;
