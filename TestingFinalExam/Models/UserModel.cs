@@ -22,7 +22,7 @@ namespace TestingFinalExam.Models
 		}
 
         
-		public int phonenumber
+		public string phonenumber
 		{
 			get;
 			set;

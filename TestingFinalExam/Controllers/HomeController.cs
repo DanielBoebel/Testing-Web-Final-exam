@@ -108,7 +108,7 @@ namespace TestingFinalExam.Controllers
             return errormessage;
         }
 
-        public string validatePhonenumber(int phonenumber)
+        public string validatePhonenumber(string phonenumber)
         {
             string errormessage = "";
 
