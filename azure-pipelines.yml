@@ -30,6 +30,18 @@ steps:
     configuration: '$(buildConfiguration)'
 
 
+- task: MSBuild@1
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
