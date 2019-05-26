@@ -75,6 +75,12 @@ namespace TestingFinalExam.Models
             set;
         }
 
+		public string multipleNumbAnswer
+		{
+			get;
+			set;
+		}
+
 	    
 		public string piAnswer
         {
