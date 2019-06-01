@@ -4,3 +4,17 @@
 TestingFinalExam/\.vs/TestingFinalExam/xs/UserPrefs\.xml
 
 *.lock
+
+\.vs/TestingFinalExam/v15/Server/sqlite3/\.storage\.ide-wal\.icloud
+
+*.icloud
+
+\.vs/TestingFinalExam/v15/Server/sqlite3/
+
+*.ide
+
+\.vs/TestingFinalExam/xs/UserPrefs\.xml
+
+\.vs/TestingFinalExam/v16/Server/sqlite3/
+
+*.ide-wal
