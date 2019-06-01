@@ -65,7 +65,9 @@ namespace TestingFinalExam.Controllers
 			subNumbers(mathobj.subAnswer, mathobjpublic.subNumb1, mathobjpublic.subNumb2);
 			divNumbers(mathobj.divAnswer, mathobjpublic.divNumb1, mathobjpublic.divNumb2);
 			multiplyNumbers(mathobj.multiplyAnswer, mathobjpublic.addNumb1, mathobjpublic.addNumb2);
-			multipleNumbers(mathobj.multipleNumbAnswer);
+            //multipleNumbers(mathobj.multipleNumbAnswer);
+            int [] array = RemoveCommasFromStringOfNumbers(mathobj.multipleNumbAnswer);
+            CheckOddAndEvenNumbers(array);
 			piSymbol(mathobj.piAnswer.ToLower(), mathobjpublic.piCorrect.ToLower());
 			sumSymbol(mathobj.sumAnswer.ToLower(), mathobjpublic.sumCorrect.ToLower());
 
@@ -250,6 +252,64 @@ namespace TestingFinalExam.Controllers
                     ModelState.AddModelError(correct.ToLower() + "Answer", message);
                 return false;
             }
+        }
+
+        public bool CheckOddAndEvenNumbers(int[] numbers)
+        {
+            int odds = 0;
+            int evens = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2 == 0)
+                {  // if number is even
+                    evens++;
+                }
+                else
+                {                            // else number is odd
+                    odds++;
+                }
+            }
+            if (evens == 3 && odds == 3)
+            {
+                ViewBag.numbResult = true;
+                string message = "The answer is correct!";
+                ModelState.AddModelError("There were " + odds + " odds and " + evens + " evens. Answer", message);
+                return true;
+            }
+            else
+            {
+                ViewBag.numbResult = false;
+                string message = "The answer is incorrect";
+                ModelState.AddModelError("There were " + odds + " odds and " + evens + " evens. Answer", message);
+                return false;
+            }
+        }
+
+        public int[] RemoveCommasFromStringOfNumbers(string numbersAndCommas)
+        {
+            int[] numbers = new int[6];
+            int x = 0;
+            string tempNumber = "";
+            if (numbersAndCommas.Length != 0)
+            {
+                for (int i = 0; i < numbersAndCommas.Length; i++)
+                {
+                    if (Char.IsDigit(numbersAndCommas[i]))
+                    {  // if char is a digit
+                        tempNumber += numbersAndCommas[i];
+                    }
+                    else
+                    {                            // else push to numbers array, because we hit a comma
+                        if (x < 6)
+                        {
+                            numbers[x] = Int32.Parse(tempNumber);
+                            x++;
+                            tempNumber = "";
+                        }
+                    }
+                }
+            }
+            return numbers;
         }
 
         public IActionResult Printable()
