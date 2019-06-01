@@ -14060,11 +14060,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/UnitTestProject/UnitTestProject.csproj",
+      "projectUniqueName": "/Users/danielcb/Projects/Testing-Web-Final-exam/UnitTestProject/UnitTestProject.csproj",
       "projectName": "UnitTestProject",
-      "projectPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/UnitTestProject/UnitTestProject.csproj",
+      "projectPath": "/Users/danielcb/Projects/Testing-Web-Final-exam/UnitTestProject/UnitTestProject.csproj",
       "packagesPath": "/Users/danielcb/.nuget/packages/",
-      "outputPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/UnitTestProject/obj/",
+      "outputPath": "/Users/danielcb/Projects/Testing-Web-Final-exam/UnitTestProject/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -14081,8 +14081,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam.csproj": {
-              "projectPath": "/Users/danielcb/Desktop/Testing Final/Testing Web Final exam/TestingFinalExam/TestingFinalExam.csproj"
+            "/Users/danielcb/Projects/Testing-Web-Final-exam/TestingFinalExam/TestingFinalExam.csproj": {
+              "projectPath": "/Users/danielcb/Projects/Testing-Web-Final-exam/TestingFinalExam/TestingFinalExam.csproj"
             }
           }
         }

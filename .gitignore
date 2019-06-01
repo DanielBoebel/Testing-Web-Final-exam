@@ -4,3 +4,15 @@
 TestingFinalExam/\.vs/TestingFinalExam/xs/UserPrefs\.xml
 
 *.lock
+
+*.xml
+
+*.dll
+
+*.cache
+
+*.props
+
+*.txt
+
+*.pdb

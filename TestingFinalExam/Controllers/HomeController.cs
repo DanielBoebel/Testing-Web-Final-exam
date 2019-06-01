@@ -156,10 +156,10 @@ namespace TestingFinalExam.Controllers
         {
             string errormessage = "";
 
-            if (guessScore < -6 || guessScore > 12)
+            if (guessScore < -7 || guessScore > 14)
             {
                 ViewBag.guessScore = true;
-                errormessage = "Guess has to be between -6 and 12";
+                errormessage = "Guess has to be between -7 and 14";
                 //ModelState.AddModelError("guessScore", errormessage);
                 return errormessage;
             }
